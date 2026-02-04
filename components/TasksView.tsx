@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Contact, Activity } from '../types';
-import { CheckSquare, CalendarClock, Briefcase, Phone, Mail, Users, FileText, Sparkles, Filter, Plus, CheckCircle2, Circle } from 'lucide-react';
+import { CheckSquare, Briefcase, Phone, Mail, Users, Plus, CheckCircle2, Circle } from 'lucide-react';
 import { LogActivityModal } from './Modals';
 
 interface TasksViewProps {

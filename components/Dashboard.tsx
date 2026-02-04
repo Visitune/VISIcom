@@ -1,8 +1,8 @@
 
 import React, { useState, useMemo } from 'react';
 import { Contact, ContactStatus } from '../types';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie } from 'recharts';
-import { TrendingUp, Users, DollarSign, CalendarClock, AlertCircle, ArrowUpRight, ArrowDownRight, MoreHorizontal, Briefcase, CheckCircle2, Filter, ListTodo } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { TrendingUp, Users, DollarSign, ArrowUpRight, ArrowDownRight, MoreHorizontal, Briefcase, CheckCircle2, ListTodo } from 'lucide-react';
 
 interface DashboardProps {
   contacts: Contact[];
@@ -37,7 +37,6 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
   const conversionRate = contacts.length > 0 ? Math.round((activeClients / contacts.length) * 100) : 0;
 
   // Chart Data - Dynamic based on visible contacts
-  // FIX: Use filteredContacts instead of contacts to make the time range buttons affect the chart
   const statusData = [
     { name: 'Lead', value: filteredContacts.filter(c => c.status === ContactStatus.LEAD).length, color: '#94a3b8' },
     { name: 'Qualifié', value: filteredContacts.filter(c => c.status === ContactStatus.QUALIFIED).length, color: '#60a5fa' },
@@ -231,7 +230,6 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
                     );
                 })}
             </div>
-            {/* Removed the button since we are adding a sidebar item for full list */}
         </div>
 
         {/* Recent Activity Timeline */}
