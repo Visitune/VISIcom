@@ -30,19 +30,20 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
   const newLeadsCount = filteredContacts.filter(c => c.status === ContactStatus.LEAD).length;
   
   // Proposals are usually relevant if they are active, regardless of date, but let's filter for the stats
-  const pendingProposals = contacts.filter(c => c.status === ContactStatus.PROPOSAL).length;
+  const pendingProposals = filteredContacts.filter(c => c.status === ContactStatus.PROPOSAL).length;
   
   // Conversion Rate (Global metric, usually)
   const activeClients = contacts.filter(c => c.status === ContactStatus.ACTIVE).length;
   const conversionRate = contacts.length > 0 ? Math.round((activeClients / contacts.length) * 100) : 0;
 
   // Chart Data - Dynamic based on visible contacts
+  // FIX: Use filteredContacts instead of contacts to make the time range buttons affect the chart
   const statusData = [
-    { name: 'Lead', value: contacts.filter(c => c.status === ContactStatus.LEAD).length, color: '#94a3b8' },
-    { name: 'Qualifié', value: contacts.filter(c => c.status === ContactStatus.QUALIFIED).length, color: '#60a5fa' },
-    { name: 'Offre', value: contacts.filter(c => c.status === ContactStatus.PROPOSAL).length, color: '#f59e0b' },
-    { name: 'Actif', value: contacts.filter(c => c.status === ContactStatus.ACTIVE).length, color: '#10b981' },
-    { name: 'Clos', value: contacts.filter(c => c.status === ContactStatus.CLOSED).length, color: '#64748b' },
+    { name: 'Lead', value: filteredContacts.filter(c => c.status === ContactStatus.LEAD).length, color: '#94a3b8' },
+    { name: 'Qualifié', value: filteredContacts.filter(c => c.status === ContactStatus.QUALIFIED).length, color: '#60a5fa' },
+    { name: 'Offre', value: filteredContacts.filter(c => c.status === ContactStatus.PROPOSAL).length, color: '#f59e0b' },
+    { name: 'Actif', value: filteredContacts.filter(c => c.status === ContactStatus.ACTIVE).length, color: '#10b981' },
+    { name: 'Clos', value: filteredContacts.filter(c => c.status === ContactStatus.CLOSED).length, color: '#64748b' },
   ];
 
   // --- Activity Timeline (Filtered) ---
@@ -118,13 +119,13 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
         <div className="flex items-center gap-1 bg-white border border-slate-200 rounded-xl p-1 shadow-sm">
             <button 
                 onClick={() => setTimeRange('month')}
-                className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${timeRange === 'month' ? 'bg-indigo-50 text-indigo-700 shadow-sm' : 'text-slate-500 hover:bg-slate-50'}`}
+                className={`px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${timeRange === 'month' ? 'bg-indigo-50 text-indigo-700 shadow-sm' : 'text-slate-500 hover:bg-slate-50'}`}
             >
                 Ce Mois
             </button>
             <button 
                 onClick={() => setTimeRange('year')}
-                className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${timeRange === 'year' ? 'bg-indigo-50 text-indigo-700 shadow-sm' : 'text-slate-500 hover:bg-slate-50'}`}
+                className={`px-4 py-2 text-xs font-bold rounded-lg transition-all cursor-pointer ${timeRange === 'year' ? 'bg-indigo-50 text-indigo-700 shadow-sm' : 'text-slate-500 hover:bg-slate-50'}`}
             >
                 Cette Année
             </button>
@@ -172,7 +173,7 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
         {/* Main Chart: Pipeline Overview */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 lg:col-span-2 flex flex-col">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-lg font-bold text-slate-800">Distribution du Pipeline</h3>
+            <h3 className="text-lg font-bold text-slate-800">Distribution du Pipeline {timeRange === 'month' ? '(Mois)' : '(Année)'}</h3>
             <button className="text-slate-400 hover:text-indigo-600"><MoreHorizontal size={20}/></button>
           </div>
           <div className="flex-1 min-h-[300px]">
@@ -230,11 +231,7 @@ const Dashboard: React.FC<DashboardProps> = ({ contacts }) => {
                     );
                 })}
             </div>
-            <div className="p-4 bg-slate-50 border-t border-slate-100">
-                <button className="w-full py-2.5 text-sm font-bold text-indigo-600 hover:bg-white bg-indigo-50 rounded-lg transition-colors border border-indigo-100 shadow-sm flex items-center justify-center gap-2">
-                    <ListTodo size={16} /> Voir toutes les tâches
-                </button>
-            </div>
+            {/* Removed the button since we are adding a sidebar item for full list */}
         </div>
 
         {/* Recent Activity Timeline */}

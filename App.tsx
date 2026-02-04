@@ -10,6 +10,7 @@ import Pipeline from './components/Pipeline';
 import CalendarView from './components/CalendarView';
 import DocumentsView from './components/DocumentsView';
 import UserGuide from './components/UserGuide';
+import TasksView from './components/TasksView'; // New import
 import { NewContactModal } from './components/Modals';
 import { MOCK_CONTACTS } from './constants';
 import { Contact, Toast, ContactStatus, calculateScore } from './types';
@@ -136,6 +137,14 @@ const App: React.FC = () => {
                 onUpdateContact={handleUpdateContact} 
                 onSelectContact={setSelectedContact} 
                 pipelineStages={pipelineStages}
+              />
+          );
+      case 'tasks': // New Route
+          return (
+              <TasksView 
+                  contacts={contacts}
+                  onUpdateContact={handleUpdateContact}
+                  onNotify={addToast}
               />
           );
       case 'documents':

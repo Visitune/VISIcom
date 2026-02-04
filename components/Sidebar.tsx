@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { LayoutDashboard, Users, FileText, Settings, Kanban, CalendarDays, FolderOpen, X, BookOpen } from 'lucide-react';
+import { LayoutDashboard, Users, FileText, Settings, Kanban, CalendarDays, FolderOpen, X, BookOpen, CheckSquare } from 'lucide-react';
 
 interface SidebarProps {
   currentView: string;
@@ -13,6 +13,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onChangeView, isOpen, on
   const menuItems = [
     { id: 'dashboard', label: 'Tableau de bord', icon: LayoutDashboard },
     { id: 'pipeline', label: 'Pipeline', icon: Kanban },
+    { id: 'tasks', label: 'Tâches', icon: CheckSquare },
     { id: 'contacts', label: 'Contacts', icon: Users },
     { id: 'documents', label: 'Documents (Drive)', icon: FolderOpen },
     { id: 'calendar', label: 'Calendrier', icon: CalendarDays },
