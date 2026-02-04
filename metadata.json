@@ -1,0 +1,6 @@
+
+{
+  "name": "VISIcom",
+  "description": "A specialized CRM for GFSI/Quality Consulting firms featuring AI-powered email drafting, meeting summarization, and activity tracking. Designed with a Google Sheets-ready data structure.",
+  "requestFramePermissions": []
+}
