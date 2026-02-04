@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Contact, getScoreColor } from '../types';
-import { Search, Filter, Mail, Phone, Plus, ChevronRight, Trophy } from 'lucide-react';
+import { Search, Filter, Mail, Plus } from 'lucide-react';
 
 interface ContactListProps {
   contacts: Contact[];

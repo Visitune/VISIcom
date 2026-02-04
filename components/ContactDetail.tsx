@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Contact, Activity, Note, Proposal, getScoreColor } from '../types';
-import { ArrowLeft, Phone, Mail, FileText, Paperclip, Send, Sparkles, Brain, Check, X, Edit2, Save, Building2, Briefcase, CalendarClock, CheckSquare, Square, FileImage, File, MessageSquareText, Download, ChevronRight, Folder, TrendingUp } from 'lucide-react';
+import { ArrowLeft, Phone, Mail, FileText, Send, Sparkles, Brain, X, Edit2, Save, Building2, Briefcase, CalendarClock, CheckSquare, Square, FileImage, File, MessageSquareText, Download, Folder, TrendingUp } from 'lucide-react';
 import { generateEmailDraft, analyzeContactHistory, summarizeMeetingNotes, generateConsultingProposal, askDocument } from '../services/geminiService';
 import { LogActivityModal, ProposalModal } from './Modals';
 

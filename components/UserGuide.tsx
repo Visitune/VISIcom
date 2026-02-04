@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { BookOpen, Sparkles, MessageSquareText, Kanban, Users, FileText, Search, Plus, Edit2, CheckSquare, Clock, History, Save, MousePointerClick, TrendingUp } from 'lucide-react';
+import { BookOpen, Sparkles, Users, Plus, Edit2, CheckSquare, History, MousePointerClick, TrendingUp } from 'lucide-react';
 
 const UserGuide: React.FC = () => {
   return (
@@ -12,7 +11,7 @@ const UserGuide: React.FC = () => {
           </div>
           <div>
             <h1 className="text-3xl font-bold text-slate-800">Guide Utilisateur</h1>
-            <p className="text-slate-500">Mode d'emploi détaillé pour gérer votre activité de conseil.</p>
+            <p className="text-slate-500">Mode d&apos;emploi détaillé pour gérer votre activité de conseil.</p>
           </div>
         </div>
 
@@ -36,8 +35,8 @@ const UserGuide: React.FC = () => {
                             <li>Cliquez sur le bouton bleu <strong>+ Nouveau Contact</strong> en haut à droite.</li>
                             <li>Remplissez les informations essentielles :
                                 <ul className="list-disc list-inside ml-4 mt-1 text-slate-500">
-                                    <li><strong>Société :</strong> Nom de l'entreprise cliente.</li>
-                                    <li><strong>Interlocuteur :</strong> Prénom, Nom, Email (crucial pour l'envoi d'offres).</li>
+                                    <li><strong>Société :</strong> Nom de l&apos;entreprise cliente.</li>
+                                    <li><strong>Interlocuteur :</strong> Prénom, Nom, Email (crucial pour l&apos;envoi d&apos;offres).</li>
                                     <li><strong>Intérêt :</strong> Le référentiel visé (ex: IFS, BRCGS, ISO 9001).</li>
                                 </ul>
                             </li>
@@ -80,7 +79,7 @@ const UserGuide: React.FC = () => {
                             <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
                                 <li>Tapez votre texte dans la zone "Nouvelle Note".</li>
                                 <li>(Optionnel) Cliquez sur <strong>Améliorer IA</strong> pour structurer automatiquement des notes prises à la volée.</li>
-                                <li>Cliquez sur <strong>Enregistrer</strong>. La note s'ajoute à l'historique.</li>
+                                <li>Cliquez sur <strong>Enregistrer</strong>. La note s&apos;ajoute à l&apos;historique.</li>
                             </ol>
                         </div>
                         <div>
@@ -90,8 +89,8 @@ const UserGuide: React.FC = () => {
                             </p>
                             <ol className="list-decimal list-inside text-sm text-slate-600 space-y-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
                                 <li>Dans la section "Tâches", cliquez sur <strong>+ Ajouter</strong>.</li>
-                                <li>Décrivez l'action (ex: "Relancer pour devis").</li>
-                                <li>Définissez une <strong>Date d'échéance</strong>.</li>
+                                <li>Décrivez l&apos;action (ex: "Relancer pour devis").</li>
+                                <li>Définissez une <strong>Date d&apos;échéance</strong>.</li>
                                 <li>La tâche apparaîtra dans votre Tableau de Bord et le Calendrier.</li>
                             </ol>
                         </div>
@@ -99,22 +98,22 @@ const UserGuide: React.FC = () => {
                     
                     <div className="border-t border-slate-100 pt-4">
                         <h3 className="font-bold text-slate-700 mb-2 flex items-center gap-2">
-                            <MousePointerClick size={18} /> Actions Rapides (Log d'appels & Emails)
+                            <MousePointerClick size={18} /> Actions Rapides (Log d&apos;appels & Emails)
                         </h3>
                         <p className="text-sm text-slate-600">
-                            En haut à droite de la fiche contact, utilisez les boutons d'action :
+                            En haut à droite de la fiche contact, utilisez les boutons d&apos;action :
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
                             <div className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg">
                                 <div className="p-2 bg-slate-100 rounded text-slate-600"><span className="font-bold">📞</span></div>
                                 <div className="text-sm">
-                                    <strong>Bouton Téléphone :</strong> Ouvre une fenêtre pour consigner le résumé d'un appel (ex: "A répondu, intéressé par v8").
+                                    <strong>Bouton Téléphone :</strong> Ouvre une fenêtre pour consigner le résumé d&apos;un appel (ex: "A répondu, intéressé par v8").
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 p-3 border border-slate-200 rounded-lg">
                                 <div className="p-2 bg-indigo-100 rounded text-indigo-600"><span className="font-bold">✉️</span></div>
                                 <div className="text-sm">
-                                    <strong>Bouton Email :</strong> Ouvre votre logiciel de messagerie par défaut et vous permet de noter le sujet de l'email envoyé pour le suivi.
+                                    <strong>Bouton Email :</strong> Ouvre votre logiciel de messagerie par défaut et vous permet de noter le sujet de l&apos;email envoyé pour le suivi.
                                 </div>
                             </div>
                         </div>
@@ -132,7 +131,7 @@ const UserGuide: React.FC = () => {
                 </div>
                 <div className="p-6">
                     <p className="text-sm text-slate-600 mb-4">
-                        L'onglet <strong>Historique</strong> dans une fiche contact centralise tout ce qui s'est passé avec ce client. C'est votre "mémoire".
+                        L&apos;onglet <strong>Historique</strong> dans une fiche contact centralise tout ce qui s&apos;est passé avec ce client. C&apos;est votre "mémoire".
                     </p>
                     <ul className="space-y-2 text-sm text-slate-600">
                         <li className="flex items-center gap-2">
@@ -141,7 +140,7 @@ const UserGuide: React.FC = () => {
                         </li>
                         <li className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                            <strong>Emails :</strong> Trace des emails envoyés (manuellement ou via l'outil).
+                            <strong>Emails :</strong> Trace des emails envoyés (manuellement ou via l&apos;outil).
                         </li>
                         <li className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-purple-500"></span>
@@ -154,7 +153,7 @@ const UserGuide: React.FC = () => {
                     </ul>
                     <div className="mt-4 p-3 bg-blue-50 text-blue-800 text-sm rounded-lg flex items-start gap-2">
                         <Sparkles size={16} className="mt-0.5 shrink-0" />
-                        <p>Astuce : Utilisez le bouton <strong>Insights</strong> en haut de la fiche contact pour demander à l'IA d'analyser cet historique et de vous suggérer la prochaine étape (ex: "Le client n'a pas été contacté depuis 10 jours, relancez-le").</p>
+                        <p>Astuce : Utilisez le bouton <strong>Insights</strong> en haut de la fiche contact pour demander à l&apos;IA d&apos;analyser cet historique et de vous suggérer la prochaine étape (ex: "Le client n&apos;a pas été contacté depuis 10 jours, relancez-le").</p>
                     </div>
                 </div>
             </div>
@@ -212,11 +211,11 @@ const UserGuide: React.FC = () => {
                     <div className="flex gap-4">
                         <div className="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 font-bold">A</div>
                         <div>
-                            <h3 className="font-bold text-slate-800">Génération d'Offres Commerciales</h3>
+                            <h3 className="font-bold text-slate-800">Génération d&apos;Offres Commerciales</h3>
                             <p className="text-sm text-slate-600 mt-1">
-                                Onglet <strong>Offres</strong> > <strong>Nouvelle Offre</strong>. 
+                                Onglet <strong>Offres</strong> &gt; <strong>Nouvelle Offre</strong>. 
                                 Sélectionnez le standard (IFS, BRCGS...), indiquez le budget estimé et une phrase de contexte (ex: "Besoin urgent audit à blanc"). 
-                                L'IA rédigera une lettre de mission complète.
+                                L&apos;IA rédigera une lettre de mission complète.
                             </p>
                         </div>
                     </div>
@@ -225,7 +224,7 @@ const UserGuide: React.FC = () => {
                         <div>
                             <h3 className="font-bold text-slate-800">Chat avec vos Documents (RAG)</h3>
                             <p className="text-sm text-slate-600 mt-1">
-                                Onglet <strong>Fichiers (RAG)</strong>. Si des fichiers sont présents (simulés dans cette démo), cliquez sur "Discuter avec l'IA". 
+                                Onglet <strong>Fichiers (RAG)</strong>. Si des fichiers sont présents (simulés dans cette démo), cliquez sur "Discuter avec l&apos;IA". 
                                 Posez des questions techniques sur le contenu du document sans avoir à le lire entièrement.
                             </p>
                         </div>

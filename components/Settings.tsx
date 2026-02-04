@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import { Contact } from '../types';
-import { Download, Upload, Database, CheckCircle, AlertTriangle, Sparkles, Key, Trash2, Eye, EyeOff, Save, RefreshCw, Kanban, Tag, Plus, X } from 'lucide-react';
+import { Download, Upload, Database, CheckCircle, AlertTriangle, Sparkles, Key, Trash2, Eye, EyeOff, Save, Kanban, Tag, Plus, X } from 'lucide-react';
 
 interface SettingsProps {
   contacts: Contact[];
